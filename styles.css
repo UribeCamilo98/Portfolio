@@ -1,0 +1,66 @@
+/*Reset basico*/
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body{
+	font-family: "Lexend", sans-serif;
+  	font-optical-sizing: auto;
+  	font-weight: 300;
+ 	font-style: normal;
+ 	background-color: #E2E0C8;
+
+}
+
+a{
+	text-decoration: none;
+}
+
+header{
+	text-align: center;
+	margin: auto;
+	padding: 2%;
+	background-color:#818C78;
+	color: #E2E0C8;
+	box-shadow: 0 8px 6px #5C7285 ;
+}
+p{
+	margin: 0.5%;
+}
+
+ul,ol{
+	list-style: none;
+}
+footer{
+	background-color:#818C78;
+	color: #E2E0C8;
+}
+
+#about-me{
+	text-align: justify;
+	border-radius: 20px;
+	padding: 1%;
+	margin:2%;
+	background-color:#A7B49E;
+	font-weight: 400;
+	box-shadow: 0 8px 6px #5C7285;
+}
+
+#project{
+	border-radius: 20px;
+	padding: 1%;
+	margin:2%;
+	background-color:#A7B49E;
+	box-shadow: 0 8px 6px #5C7285;
+}
+
+#projects{
+	background-color:#818C78;
+	border-radius: 20px;
+	color: #E2E0C8;
+	padding: 1%;
+	margin:2%;
+	box-shadow: 0 8px 6px #5C7285;
+}
