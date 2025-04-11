@@ -39,6 +39,7 @@ ul,ol{
 }
 h3{
 	padding: 1.5vw;
+	min-height: 20%;
 }
 
 
@@ -54,12 +55,12 @@ h3{
 	color: #E2E0C8;
 }
 
-#project-img{
+.project-img{
 	max-width: 20%;
 	border-radius: 20px;
 }
 
-#pcontent-info{
+.pcontent-info{
 	display:inline-flex;
 	flex-direction: column;
 	gap: 10%;
@@ -68,7 +69,7 @@ h3{
 	justify-content: center;
 }
 
-#project{
+.project{
 	display: flex;
 	gap: 1%;
 	border-radius: 20px;
@@ -100,17 +101,19 @@ h3{
 	margin:2%;
 	box-shadow: 0 8px 6px #5C7285;
 }
-#service-img{
-	max-width: 100%;
-	box-sizing: border-box;
+.service-img{
+	max-width: 80%;
 	border-radius: 20px;
 	margin: 1vw;
 }
 
-#service{
-	font-size: 1vw;
-	box-sizing: border-box;
-	isplay: flex;
+.service{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	min-height: 90%;
+	flex-basis:25%;
+	font-size: 1rem;
 	gap: 1%;
 	border-radius: 20px;
 	padding: 1%;
