@@ -30,8 +30,9 @@ footer{
 a{
 	text-decoration: none;
 	color: inherit;
-
-
+}
+article{
+	display: flex;
 }
 p{
 	margin: 0.5%;
@@ -105,7 +106,7 @@ h3{
 	box-shadow: 0 8px 6px #5C7285;
 }
 .service-img{
-	max-width: 80%;
+	max-width: 60%;
 	border-radius: 20px;
 	margin: 1vw;
 }
@@ -114,7 +115,7 @@ h3{
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
-	min-height: 90%;
+	min-height: 100%;
 	flex-basis:25%;
 	font-size: 1rem;
 	gap: 1%;
