@@ -18,7 +18,7 @@
 
 				<button id="menu-btn" class="padding-s" aria-controls="primary-navigation" aria-expanded="false">
 					<span class="sr-only">Menu</span>
-					 <svg class="icon-hamburger" viewBox="0 0 100 100" width="36" height="36" aria-hidden="true">
+					 <svg class="icon-hamburger" viewBox="0 0 100 100" aria-hidden="true">
     					<rect y="20" width="100" height="10" rx="5"></rect>
     					<rect y="45" width="100" height="10" rx="5"></rect>
    						<rect y="70" width="100" height="10" rx="5"></rect>
@@ -26,13 +26,25 @@
 				</button>
 
 				<nav id="primary-navigation" class="text-center shadow-default" hidden>
-					<ul class="">
+					<ul>
 						<li class="padding-xs"><a href="#about">Acerca de mi</a></li>
       					<li class="padding-xs"><a href="#projects">Proyectos</a></li>
       					<li class="padding-xs"><a href="#contact">Contactame</a></li>
 					</ul>
 				</nav>
 			</header>
+			<section id="hero" class="margin-s">
+				<div class="hero-content">
+					<p class="hero-greeting font-size-medium margin-s">Hola,mi nombre es</p>
+					<h1 class="font-alt color-text-accent margin-s">Camilo Uribe</h1>
+					<h2 class="hero-profession font-size-small margin-s">Desarrollador Frontend</h2>
+				</div>
+				<a href="#projects" class="hero-cta" aria-label="Ver proyectos">
+    				<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+      				<path d="M12 16.5l-6-6h12z"></path>
+    				</svg>
+  				</a>
+			</section>
 
 			<!--
 			<section id="about-me" class="bg-primary text-justify text-light rounded margin-default shadow-default">

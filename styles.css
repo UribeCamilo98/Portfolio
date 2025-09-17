@@ -91,7 +91,12 @@ table{
 /*MENU---------------------*/
 /*-------------------------*/
 	--menu-count:3; /*ES NECESARIO AJUSTARLO DEPENDIENDO DE LA CANTIDAD DE ELEMENTOS EN EL MENU QUE EXISTAN */
+/*-------------------------*/
+/*HEADER-------------------*/
+/*-------------------------*/
+	--header-height:0;
 }
+
 /*-----VARIABLES END--------------------------------------------------------*/
 
 /*-----UTILITIES------------------------------------------------------------*/
@@ -120,6 +125,9 @@ table{
 }
 .font-size-small{
 	font-size: var(--font-size-small);
+}
+.font-alt{
+	font-family: var(--font-alt);
 }
 /*-----------------*/
 /*LIST-------------*/
@@ -208,6 +216,12 @@ table{
 
 /*-----LAYOUTS--------------------------------------------------------------*/
 /*--------------*/
+/*HTML----------*/
+/*--------------*/
+html{
+	font-size: 100%;
+}
+/*--------------*/
 /*BODY----------*/
 /*--------------*/
 body{
@@ -231,17 +245,16 @@ a:hover{
 /*HEADINGS----------*/
 /*------------------*/
 h1{
-	font-family: var(--font-alt);
 	line-height: 1.2;
 	margin-bottom: var(--spacing-l);
+	color: var(--color-accent);
+	font-size: 5rem;
 }
 h2{
-	font-family: var(--font-alt);
 	line-height: 1.2;
 	margin-bottom: var(--spacing-m);
 }
 h3{
-	font-family: var(--font-alt);
 	line-height: 1.2;
 	margin-bottom: var(--spacing-s);
 }
@@ -267,6 +280,11 @@ header{
 	z-index: 100;
 }
 
+.icon-hamburger{
+	width: 2.5rem;
+	height: 2.5rem;
+}
+
 #primary-navigation{
 	display: flex;
 	flex-direction: column;
@@ -280,8 +298,9 @@ header{
 }
 
 #menu-btn{
-	min-height: 44px;
-	min-width: 44px;
+	min-height: 48px;
+	min-width: 48px;
+	padding: var(--spacing-xs);
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -293,42 +312,28 @@ header{
 	background-color: var(--color-bg-alt);
 	transform: scale(1.2);
 }
-
-/*.header-main{
-	widt0h: 100%;
-	padding: 0 var(--spacing-s);
-	height: 60px;
-	box-shadow: var(--shadow-default);
+/*-----HEADER END-----------------------------------------------------------*/
+/*-----HERO-----------------------------------------------------------------*/
+#hero{
+	min-height: calc(100vh - var(--header-height));
 	display: flex;
-	justify-content: space-between;
-	position: fixed;
-	top: 0;
-	z-index: 100;
-
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin: 0 auto;
+}
+.hero-content{
+	display: flex;
+	flex-direction: column;
+	max-width: 600px;
+	margin: 0 auto;
+}
+.hero-greeting{
+	align-self: flex-start;
+	margin-bottom: 0;
 }
 
-
-
-.header-main nav{
-	display: flex;
+.hero-profession{
+	align-self: flex-end;
+	margin-top: 0;
 }
-
-.header-main ul{
-	height: 100%;
-	padding-left: var(--spacing-s);
-	list-style: none;
-	display: flex;
-	align-self: center;
-}
-
-.header-main ul li a{
-	display: block;
-	padding: 0 var(--spacing-s);
-	height: 100%;
-	line-height: 4;
-	font-size: var(--font-size-small);
-	text-transform: uppercase;
-	cursor: pointer;
-	transition: all ease-in-out 100ms;
-}*/
-

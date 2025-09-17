@@ -1,5 +1,6 @@
 const btn= document.querySelector("#menu-btn");
 const nav= document.querySelector("#primary-navigation");
+const header=document.querySelector("header");
 
 btn.addEventListener("click",function(){
 	console.log("me clickeaste");
@@ -11,3 +12,5 @@ btn.addEventListener("click",function(){
 		nav.setAttribute("hidden","");
 	}
 });
+
+document.documentElement.style.setProperty("--header-height", header.offsetHeight + "px");
