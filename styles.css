@@ -153,6 +153,9 @@ table{
 .color-text-alt{
 	color: var(--color-text-alt);
 }
+.color-accent{
+	color: var(--color-accent);
+}
 /*-------------------------*/
 /*Layout & Spaces ---------*/
 /*-------------------------*/
@@ -334,7 +337,7 @@ header{
 	opacity: 0.2;
 	z-index: -1;
 }
-}
+
 .hero-content{
 	display: flex;
 	flex-direction: column;
@@ -378,7 +381,7 @@ header{
 
 .about-me{
 	position: relative;
-	text-align: rigth;
+	text-align: right;
 	padding: var(--spacing-m);
 }
 
@@ -399,4 +402,91 @@ header{
 
 .about-me::after {
   bottom: 0;
+}
+
+#about-skills{
+	display: flex;
+	max-height: 30px;
+	justify-content: center;
+	gap: var(--spacing-s);
+}
+/*-----ABOUT-ME END ---------------------------------------------------------*/
+/*-----PROJECTS--------------------------------------------------------------*/
+.projects-title {
+  font-size: clamp(3rem, 8vw, 5rem);
+  text-align: center;
+  color: var(--color-text-alt);
+  opacity: 0.5; /* ni muy fuerte ni tan transparente que se pierda */
+  padding: var(--spacing-s);
+}
+
+.project-card{
+	display: flex;
+	flex-direction: column;
+	margin: var(--spacing-m);
+}
+.project-card-header{
+	color: var(--color-accent);
+	margin-left: var(--spacing-xs);
+}
+.project-card-info{
+	
+	background-color: var(--color-bg-alt);
+	box-shadow: var(--shadow-default);
+	padding: var(--spacing-m);
+	margin: var(--spacing-xs);
+}
+
+.project-card-title{
+	font-size: var(--font-size-medium);
+}
+
+.project-card-description{
+	position: relative;
+	text-align: right;
+	padding-top: var(--spacing-s);
+	padding-bottom: var(--spacing-s);
+}
+.project-card-description::before,
+.project-card-description::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+  height: 2px;
+  background-color: var(--color-text);
+}
+
+.project-card-description::before {
+  top: 0;
+}
+
+.project-card-description::after {
+  bottom: 0;
+}
+
+.project-card-techlist{
+	display: flex;
+	justify-content:center;
+	align-items: center;
+	gap: var(--spacing-s);
+}
+
+.project-card-actions{
+	display: flex;
+	margin: var(--spacing-s);
+	justify-content: center;
+	align-items: center;
+	gap: var(--spacing-s);
+	margin-bottom: 0;
+}
+
+.btn{
+	background-color: var(--color-accent);
+	padding: var(--spacing-s);
+	margin: var(--spacing-s) var(--spacing-s) 0 var(--spacing-s);
+	border-radius: var(--radius-default);
+	color: var(--color-bg-alt);
+	box-shadow: var(--shadow-default);
 }
