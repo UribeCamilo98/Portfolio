@@ -517,7 +517,7 @@ footer{
 
 .icon{
 	background-color: var(--color-bg-alt);
-	padding: var(--spacing-s);
+	padding: var(--spacing-xs);
 	border-radius: 50%;
 	box-shadow:var(--shadow-default);
 }
