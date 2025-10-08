@@ -224,6 +224,7 @@ table{
 /*--------------*/
 html{
 	font-size: 100%;
+	scroll-behavior: smooth;
 }
 /*--------------*/
 /*BODY----------*/
@@ -490,6 +491,11 @@ header{
 	color: var(--color-bg-alt);
 	box-shadow: var(--shadow-default);
 }
+
+.btn:hover{
+	background-color: var(--color-text);
+	color: var(--color-bg-alt);
+}
 /*-----PROJECTS END --------------------------------------------------------*/
 /*-----FOOTER---------------------------------------------------------------*/
 footer{
@@ -528,3 +534,4 @@ footer{
 	color: var(--color-bg-alt);
 	margin: 0;
 }
+/*-----FOOTER END-----------------------------------------------------------*/
