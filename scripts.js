@@ -3,7 +3,6 @@ const nav= document.querySelector("#primary-navigation");
 const header=document.querySelector("header");
 
 btn.addEventListener("click",function(){
-	console.log("me clickeaste");
 	if(btn.getAttribute("aria-expanded")=="false"){
 		btn.setAttribute("aria-expanded","true");
 		nav.removeAttribute("hidden");
