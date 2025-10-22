@@ -69,10 +69,11 @@ table{
 /*---------------*/
 	--font-main:"Patua One", serif;
 	--font-alt:"Caprasimo", serif;
-	--font-size-xbig:4rem;
-	--font-size-big:2rem;
-	--font-size-medium:1.3rem;
-	--font-size-small:1rem;
+	--font-size-xxl:5rem;
+	--font-size-xl: 4rem;
+	--font-size-l:2rem;
+	--font-size-m:1.4rem;
+	--font-size-s:1rem;
 /*--------------*/
 /*IMGS----------*/
 /*--------------*/
@@ -96,6 +97,7 @@ table{
 /*HEADER-------------------*/
 /*-------------------------*/
 	--header-height:0;
+	--menu-count: 0;
 }
 
 /*-----VARIABLES END--------------------------------------------------------*/
@@ -118,18 +120,7 @@ table{
 /*---------------*/
 /*TEXTS----------*/
 /*---------------*/
-.font-size-big{
-	font-size: var(--font-size-big);
-}
-.font-size-medium{
-	font-size: var(--font-size-medium);
-}
-.font-size-small{
-	font-size: var(--font-size-small);
-}
-.font-alt{
-	font-family: var(--font-alt);
-}
+
 /*-----------------*/
 /*LIST-------------*/
 /*-----------------*/
@@ -253,7 +244,7 @@ h1{
 	line-height: 1.2;
 	margin-bottom: var(--spacing-l);
 	color: var(--color-accent);
-	font-size: 5rem;
+	font-size: var(--font-size-xxl);
 }
 h2{
 	line-height: 1.2;
@@ -273,12 +264,11 @@ img{
 
 /*-----LAYOUTS END----------------------------------------------------------*/
 /*-----HEADER---------------------------------------------------------------*/
-nav[hidden]{
-	display: none !important;
-}
 
 header{
-	position: relative;
+	background-color: var(--color-bg);
+	position: sticky;
+	top: 0;
 	display: flex;
 	justify-content: space-between;
 	width: 100%;
@@ -288,6 +278,7 @@ header{
 .icon-hamburger{
 	width: 2.5rem;
 	height: 2.5rem;
+	fill: currentColor;
 }
 
 #primary-navigation{
@@ -300,6 +291,16 @@ header{
 	background-color: var(--color-bg-alt);
 	padding: var(--spacing-s);
 	gap: var(--spacing-s);
+	max-height: 0;
+	overflow: hidden;
+	opacity: 0;
+	transition: max-height 0.4s ease, opacity 0.3s ease;
+}
+
+#menu-btn[aria-expanded="true"] + #primary-navigation{
+	max-height: calc(var(--menu-count) * 3.5rem + var(--spacing-m));
+	opacity: 1;
+	overflow: visible;
 }
 
 #menu-btn{
@@ -314,7 +315,7 @@ header{
 }
 
 #menu-btn[aria-expanded="true"]{
-	background-color: var(--color-bg-alt);
+	color: var(--color-accent);
 	transform: scale(1.2);
 }
 /*-----HEADER END-----------------------------------------------------------*/
@@ -347,12 +348,14 @@ header{
 .hero-greeting{
 	align-self: flex-start;
 	margin-bottom: 0;
+	font-size: var(--font-size-m);
 }
 
 .hero-profession{
 	align-self: flex-end;
 	text-align: right;
 	margin-top: 0;
+	font-size: var(--font-size-s);
 }
 .hero-cta{
 	display: flex;
@@ -373,6 +376,7 @@ header{
 /*-----HERO END-------------------------------------------------------------*/
 /*-----ABOUT ME-------------------------------------------------------------*/
 #about{
+	scroll-margin-top: var(--header-height); 
 	background-color: var(--color-text);
 	color: var(--color-bg-alt);
 	padding: var(--spacing-m);
@@ -413,8 +417,11 @@ header{
 }
 /*-----ABOUT-ME END ---------------------------------------------------------*/
 /*-----PROJECTS--------------------------------------------------------------*/
+#projects{
+	scroll-margin-top: var(--header-height);
+}
 .projects-title {
-  font-size: clamp(3rem, 8vw, 5rem);
+  font-size: clamp(3rem, 8vw, var(--font-size-xxl));
   text-align: center;
   color: var(--color-text-alt);
   opacity: 0.5; /* ni muy fuerte ni tan transparente que se pierda */
@@ -439,7 +446,7 @@ header{
 }
 
 .project-card-title{
-	font-size: var(--font-size-medium);
+	font-size: var(--font-size-m);
 }
 
 .project-card-description{
@@ -535,3 +542,33 @@ footer{
 	margin: 0;
 }
 /*-----FOOTER END-----------------------------------------------------------*/
+/*-----MEDIA QUERIES--------------------------------------------------------*/
+/*-----TABLET---------------------------------------------------------------*/
+@media(min-width: 768px){
+/*-----HEADER---------------------------------------------------------------*/
+	header{
+		padding: var(--spacing-s);
+	}
+/*-----HEADER END-----------------------------------------------------------*/
+/*-----HERO-----------------------------------------------------------------*/
+h1{
+	font-size: var(--font-size-xxl);
+}
+
+.hero-greeting{
+	font-size: var(--font-size-m);
+}
+
+.hero-profession{
+	font-size: var(--font-size-m);
+}
+/*-----HERO END ------------------------------------------------------------*/
+
+}
+/*-----TABLET END-----------------------------------------------------------*/
+/*-----DESKTOP--------------------------------------------------------------*/
+@media(min-width: 1024px){
+
+}
+/*-----DESKTOP END----------------------------------------------------------*/
+/*-----MEDIA QUERIES END----------------------------------------------------*/
