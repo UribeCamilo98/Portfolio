@@ -521,11 +521,14 @@ footer{
 	margin: var(--spacing-xs);
 }
 
-.footer-contactlist{
+.footer-mobile{
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	gap: var(--spacing-m);
+}
+.footer-desktop{
+	display: none;
 }
 
 .icon{
@@ -563,7 +566,60 @@ h1{
 	font-size: var(--font-size-m);
 }
 /*-----HERO END ------------------------------------------------------------*/
+/*-----ABOUT----------------------------------------------------------------*/
 
+.about-me{
+	width: 60%;
+	margin: 0 auto;
+	text-align: center;
+	position: relative;
+}
+
+#about-skills{
+	margin: var(--spacing-s);
+	font-size: var(--font-size-m);
+}
+/*-----ABOUT END------------------------------------------------------------*/
+/*------PROJECTS-------------------------------------------------------------*/
+.project-grid{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+/*------PROJECTS END---------------------------------------------------------*/
+/*-----FOOTER----------------------------------------------------------------*/
+footer{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.footer-card{
+	max-width: 80%;
+	padding-left: var(--spacing-l);
+	padding-right: var(--spacing-l);
+}
+.footer-mobile{
+	display: none;
+}
+
+.footer-desktop{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: var(--spacing-m);
+	padding: var(--spacing-s);
+}
+
+.footer-col{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	color: var(--color-bg-alt);
+}
+
+
+/*-----FOOTER END------------------------------------------------------------*/
 }
 /*-----TABLET END-----------------------------------------------------------*/
 /*-----DESKTOP--------------------------------------------------------------*/
